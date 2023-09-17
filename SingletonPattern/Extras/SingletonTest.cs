@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace SingletonPattern
+namespace SingletonPattern.Extras
 {
-    public class SingletonTest
+    public sealed class SingletonTest
     {
         private static SingletonTest _instance;
         private static readonly object _instanceLock = new object();
@@ -12,11 +12,11 @@ namespace SingletonPattern
         }
         public static SingletonTest Instance()
         {
-            if( _instance == null )
+            if (_instance == null)
             {
-                lock ( _instanceLock )
+                lock (_instanceLock)
                 {
-                    if( _instance == null )
+                    if (_instance == null)
                     {
                         _instance = new SingletonTest();
                     }
