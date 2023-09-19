@@ -45,8 +45,9 @@ namespace SingletonPattern
         PatientService obj = new PatientService();
         public void de()
         {
-            obj.method2();
+            //var x = sp1.method2();
             var y = sp1.method3();
+            obj.method2();
         }
     }
 }
